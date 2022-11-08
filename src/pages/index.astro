@@ -1,15 +1,51 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PostPreview from '../components/PostPreviewCard.astro';
-import Pagination from '../components/Pagination.astro';
+import PageLayout from "../layouts/PageLayout.astro";
 import Config from "../sarissa.config.cjs";
-
-const allPosts = await Astro.glob('./post/*.md');
-const sortedPosts = allPosts.filter(f=> f.frontmatter.draft != true).sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
-const totalPage = Math.max(1, Math.ceil(allPosts.length / Config.pageSize));
 ---
 
-<BaseLayout pageTitle="Home">
-    {sortedPosts.slice(0, Config.pageSize).map((post) => (  <PostPreview post={post} />))}
-    <Pagination currentPage=1 totalPage={totalPage} url="posts" /> 
-</BaseLayout>
+<PageLayout pageTitle={Config.menu.home}>
+  <article class="prose max-w-none">
+    <h2>Who We Are</h2>
+    <p><b>Toro Z Muay Thai</b> is a new gym in Sacramento dedicated to teaching and honing muay thai and its techniques.</p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum nihil molestiae quaerat asperiores nobis ab ex rerum at impedit corporis sint inventore optio incidunt, cum consequatur repellat sunt sapiente molestias doloremque nulla. Illum odit architecto quasi dolorum veritatis nam impedit.
+    </p>
+
+    <h2>Classes</h2>
+    <h3>Morning Muay Thai</h3>
+    <h4>10:30am - 11:30am</h4>
+    <p>
+      
+    </p>
+    <h3>Personals</h3>
+    <h4>11:30am - 5:00pm</h4>
+    <p>
+      Toro Z offers hour long personal training sessions where you can hone your fighting skills one on one with our coach.
+      For further details, feel free to contact Coach Iggy through the form below.
+    </p>
+    <h3>Kids' Class</h3>
+    <h4>5:00pm - 6:00pm</h4>
+    <p>
+      Start your young and rising fighters off early in Toro Z's Kids' Class! Students up to # years old
+      will learn the fundamentals
+    </p>
+    <h3>Fitness Class</h3>
+    <h4>6:00pm - 7:00pm</h4>
+    <p>
+      Toro Z's dedicated Fitness Class is less about the intricacies of fighting techniques and more about
+      building up the physical and mental fortitude that a fighter needs to succeed in the ring.
+
+    </p>
+    <h3>Evening Muay Thai (Beginner)</h3>
+    <h4>7:00pm - 8:00pm</h4>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam est modi amet molestias deserunt eius autem rem dolorem qui esse!
+    </p>
+    <h3>Evening Muay Thai (Advanced)</h3>
+    <h4>8:00pm - 9:00pm</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ratione, quod placeat impedit architecto molestias et modi totam doloremque laborum.</p>
+
+    <h2>How to Get Started</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, molestiae fugiat ex impedit odit possimus perspiciatis dolore nostrum enim vel dicta! Qui perspiciatis odio quia eius vel ipsa, eos reprehenderit?</p>
+  </article>
+</PageLayout>
