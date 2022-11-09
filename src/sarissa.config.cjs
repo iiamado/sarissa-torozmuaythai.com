@@ -2,7 +2,7 @@ export default {
   //Web site title. It is visible in sidebar and browser
   siteTitle: "Toro Z Muay Thai",
   //Web site desciption. It is visible in sidebar. Also added head meta data.
-  siteDescription: "8500 Fruitridge Rd, Sacramento, CA 95823",
+  siteDescription: "8500 Fruitridge Rd, Sacramento, CA 95826",
   //Web site favicon
   favicon: "/favicon.png",
   //Web site image. It is visible in sidebar
@@ -56,8 +56,9 @@ export default {
   },
   //Customize the labels
   menu: {
-    home: "Welcome",
+    home: "Home",
     about: "About Us",
+    contact: "Contact Us",
     news: "News",
     search: "Search",
     archive: "Archive",

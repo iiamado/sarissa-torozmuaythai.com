@@ -1,0 +1,24 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Config from "../sarissa.config.cjs";
+---
+
+<PageLayout pageTitle={Config.menu.contact}>
+  <article class="prose max-w-none">
+    <h2>Location</h2>
+    <p>8500 Fruitridge Rd<br>Sacramento, CA 95826</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3121.385703473057!2d-121.3920001843995!3d38.5248762764203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac552c0fcde41%3A0x461ed7e2df176701!2sToro%20Z%20Muay%20Thai!5e0!3m2!1sen!2sus!4v1667968723464!5m2!1sen!2sus"
+      width="600" height="450"
+      style="border:0;"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <h2>Where to Reach Out</h2>
+    <ul>
+      <li><b>Phone:</b> (209) 898-5311</li>
+      <li><b>Email:</b> coach@torozmuaythai.com</li>
+      <li>Alternatively, you can fill out the <b>submission form</b> below:</li>
+
+    </ul>
+  </article>
+</PageLayout>
