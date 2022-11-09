@@ -10,6 +10,6 @@ const totalPage = Math.max(1, Math.ceil(allPosts.length / Config.pageSize));
 ---
 
 <BaseLayout pageTitle="News">
-    {sortedPosts.slice(0, Config.pageSize).map((post) => (  <PostPreview post={post} />))}
-    <Pagination currentPage=1 totalPage={totalPage} url="posts" /> 
+  {sortedPosts.slice(0, Config.pageSize).map((post) => (  <PostPreview post={post} />))}
+  <Pagination currentPage="1" totalPage={totalPage} url="posts" />
 </BaseLayout>
