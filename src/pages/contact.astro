@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import Config from "../sarissa.config.cjs";
+import FeedbackForm from "../components/FeedbackForm.astro";
 ---
 
 <PageLayout pageTitle={Config.menu.contact}>
@@ -20,6 +21,6 @@ import Config from "../sarissa.config.cjs";
       <li><b>Email:</b> coach@torozmuaythai.com</li>
       <li>Alternatively, you can fill out the <b>submission form</b> below:</li>
     </ul>
-
+  <FeedbackForm/>
   </article>
 </PageLayout>
