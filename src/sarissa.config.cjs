@@ -2,7 +2,7 @@ export default {
   //Web site title. It is visible in sidebar and browser
   siteTitle: "Toro Z Muay Thai",
   //Web site desciption. It is visible in sidebar. Also added head meta data.
-  siteDescription: "8500 Fruitridge Rd, Sacramento, CA 95826",
+  siteDescription: "3749 Stockton Blvd, Sacramento, CA 95820 \n Suite A and B",
   //Web site favicon
   favicon: "/favicon.png",
   //Web site image. It is visible in sidebar
